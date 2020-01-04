@@ -6,9 +6,6 @@ spring:
   application:
     name: user-service
   cloud:
-    inetutils:
-      ignored-interfaces: VM.*
-      preferred-networks: 176.8.6
     config:
       override-none: true
   rabbitmq:
@@ -21,6 +18,8 @@ server:
   port: 8101
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
