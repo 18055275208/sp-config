@@ -6,6 +6,9 @@ spring:
   application:
     name: user-service
   cloud:
+    inetutils:
+      ignored-interfaces: VM.*
+      preferred-networks: 176.8.6
     config:
       override-none: true
   rabbitmq:
